@@ -5,20 +5,22 @@ import lombok.Getter;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import java.awt.*;
-import java.awt.Canvas;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseEvent;
+
 public class Logic extends Adapter{
 
 
     @Getter
     private Canvas canvas;
+    private Window window;
 
     JSlider lengthSlider;
     JSlider spacingSlider;
     JSlider radiusSlider;
 
     JComboBox shapes;
+
 
     private int shapeId;
     public Logic(JSlider lengthSlider, JSlider spacingSlider, JSlider radiusSlider, JComboBox shapes ){
@@ -28,7 +30,7 @@ public class Logic extends Adapter{
         this.shapes = shapes;
 
         canvas = new Canvas(lengthSlider.getValue(),spacingSlider.getValue(),radiusSlider.getValue(), shapeId);
-        this.canvas.setBackground(Color.DARK_GRAY);
+        this.canvas.setBackground(Color.BLUE);
         this.canvas.addMouseMotionListener(this);
         this.canvas.addMouseListener(this);
 
