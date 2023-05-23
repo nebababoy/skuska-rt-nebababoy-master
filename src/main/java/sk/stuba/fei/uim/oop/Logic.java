@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.Canvas;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseEvent;
-import sk.stuba.fei.uim.oop.Tail;
 public class Logic extends Adapter{
 
 
